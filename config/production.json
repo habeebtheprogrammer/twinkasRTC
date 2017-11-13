@@ -1,0 +1,9 @@
+{
+    "dbURL":"mongodb://guest:guest@ds159845.mlab.com:59845/twinkasrtc",
+    "fb":{
+        "appID":"141625929928215",
+        "appSecret":"1a7b27ddefe05428d25b5afbbb368d51",
+        "callback":"http://localhost:3000/auth/facebook/callback"
+        
+    }
+}

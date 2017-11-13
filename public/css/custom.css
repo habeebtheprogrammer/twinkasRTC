@@ -1,0 +1,320 @@
+@font-face{
+    font-family: avenir;
+    src:url('../fonts/Avenir LT 65 Medium.ttf');
+    
+}
+body{
+    font-family: avenir;
+    background: rgb(237, 241, 245);
+}
+.navbar-inverse{
+    background: linear-gradient(to right,#2f323e,#692F2F)
+    
+}
+nav.navbar{
+    margin-bottom: 0px;
+}
+.btn-custom{
+    background: linear-gradient(to right,#2f323e,#692F2F);
+    color: #fff;
+    border: none;
+    
+}
+.btn-custom:hover,.btn-custom:focus{
+    background: linear-gradient(to right,#2f323e,#692F2F);
+    color: #fff;
+    border: none;
+}
+.navbar-collapse .nav.navbar-nav a.navbar-link{
+    padding:0px; padding:14px
+}
+.navbar-collapse input{
+    height: 30px
+}
+.brand-logo{
+    float: left;
+}
+.brand-name{
+float:left ;padding:4px 10px;font-size:1.2em;font-weight:100;
+font-family: Courier New, Courier, monospace;
+font-weight: 800;
+color: #EB7506
+}
+.brand-name span{color:#fff}
+.img-rounded{
+    border-radius: 100%
+}
+.home-tab a i{
+    font-size:1.5em; margin:20px 0px 10px
+}
+.row{
+    margin: 0px;
+}
+.zero{
+    margin: 0%;
+    padding: 0%
+}
+nav ul.nav.navbar-nav li a{
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-bottom: 0px
+}
+
+.second-nav .active{
+    background: #337ab7;
+}
+.second-nav .active a{
+  color: #fff
+
+}
+.second-nav{
+    border-bottom:1px solid #eee;background:#fff;padding:0px 10px
+}
+nav input.form-control{
+    border-radius: 40px;
+    background: #eee;
+}
+
+.form-inline .form-control{
+    width:80%;
+    -webkit-transition: 0.3s ease-in  ;
+    -moz-transition: 0.3s ease-in  ;
+    transition: 0.3s ease-in  ;
+    float: right
+}
+.form-inline .form-control:focus{
+    width: 100%;
+    -webkit-transition: 0.3s ease-in  ;
+    -moz-transition: 0.3s ease-in  ;
+    transition: 0.3s ease-in  ;
+}
+a{
+    color: #000
+}
+/* .second-nav ul li.list{
+    padding: 15px
+}
+.second-nav ul li a:hover{
+    background: #fff;
+} */
+.second-nav ul li a{
+    padding: 20px
+}
+.list.text{
+    padding: 20px 10px;
+}
+.list.button{
+    padding: 0px;
+    margin: 14px 10px 0px
+    
+}
+.list.button .btn{
+   box-shadow:0 1px 20px 0 darkgrey;border:none
+}
+.btn-danger{
+    background:#f44336;
+}
+.btn-primary{
+    background:#1e88e5;
+}
+.main-page{
+    padding: 20px 40px 10px 20px;
+    position: relative
+    
+}
+.page-start{
+    background: #fff;
+    
+}
+.page-start .left-grid a.active > div{
+    background: #287AC2;
+    color: #fff
+}
+.page-start .left-grid a:hover > div{
+    background: #f7fafc;
+    color: #596BA8;
+        -webkit-transition: 0.2s ease-in  ;
+    -moz-transition: 0.2s ease-in  ;
+    transition: 0.2s ease-in  ; 
+}
+.page-start .left-grid a > div{
+    padding:13px 15px;
+}
+.page-start .left-grid input.form-control{
+    border: none;
+    height: 60px;
+    padding: 10px 30px;
+    color: #aaa;
+    box-shadow: none;
+    border-bottom: 2px solid #eee;
+     -webkit-transition: 0.2s ease-in  ;
+    -moz-transition: 0.2s ease-in  ;
+    transition: 0.2s ease-in  ;
+}
+.page-start .left-grid input.form-control:focus{
+    border-bottom: 3px solid #FF5100;
+    -webkit-transition: 0.2s ease-in  ;
+    -moz-transition: 0.2s ease-in  ;
+    transition: 0.2s ease-in  ;
+}
+.page-start .left-grid{
+    width:20%;border-right: 1px solid #eee;
+}
+.page-title{
+    padding: 14px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #eee;
+}
+#localvideo{
+   
+width: 100%;
+}
+.videocall{
+    color: #C52B2B;
+}
+.videocall:hover{
+    color: #4394CA;
+    border: 1px  solid #4394CA;
+}
+.home-page button.btn{
+    color:#eee
+    
+}
+.home-page button.btn:hover{
+    color: #D63D3D;
+    border: 1px  solid #D63D3D;
+    background: transparent;
+}
+.groupbtn,.videobtn,.chatbtn{
+    background:transparent;font-size:3em;padding:20px 30px
+}
+.left-grid a .img{
+float:left;width:20%
+}
+.left-grid a .name{
+float:left; padding:0px 
+}
+.busy{
+    color:#f44336;font-size:0.8em
+}.online{color: #3BDB3B;font-size:0.8em}.away{color:#F1B00A;font-size:0.8em}.offline{color:#aaa;font-size:0.8em}
+.page-row{
+    border-left:2px solid lightblue;
+}
+.chat-box{
+    background: #e5f7ff;
+    border-radius: 5px;
+    padding: 10px 15px;  
+    display: inline-block;
+}
+.chat-box2{
+    background: #eee;
+    border-radius: 5px;
+    padding: 10px 15px;  
+    display: inline-block;
+}
+.dp::after{
+    content: "";
+    border-color: transparent #e5f7ff transparent transparent;  
+    border-width: 10px;
+    position: absolute;
+    border-style: solid;
+    right: 0;
+    top:10px;
+}
+.dp2::after{
+    content: "";
+    border-color: transparent transparent transparent #eee;  
+    border-width: 10px;
+    position: absolute;
+    border-style: solid;
+    left: 0;
+    top:10px;
+}
+.chat-input input{
+      -webkit-transition: 0.2s ease-in  ;
+    -moz-transition: 0.2s ease-in  ;
+    transition: 0.2s ease-in  ;
+}
+ input:focus{
+    letter-spacing: 2px;
+      -webkit-transition: 0.2s ease-in  ;
+    -moz-transition: 0.2s ease-in  ;
+    transition: 0.2s ease-in  ;
+}
+.page-start .left-grid{
+    height: 410px;
+    overflow: auto;
+}
+.page-start .right-grid{
+    width:80%
+}
+button:hover{
+          -webkit-transition: 0.2s ease-in  ;
+    -moz-transition: 0.2s ease-in  ;
+    transition: 0.2s ease-in  ; 
+}
+.x-sidebar .sidebar-list a{
+    font-size: 1.3em;
+    display:block;position:relative;padding:20px 0px;
+}
+.x-sidebar .sidebar-list a:hover{
+      background: #f7fafc;
+      color: #273F72
+}
+
+.x-sidebar a {
+    color: #555
+}
+.x-sidebar .sidebar-list a.active{
+      background: #f44336;
+      color: #fff
+}
+.x-left-grid{
+    background:#fff;width:4.5%; box-shadow:0 1px 20px 0 lightgrey;min-height:580px
+}
+.x-right-grid{
+    width:95.5%;padding:0
+}
+   .second-nav ul.right-nav {
+       float: right
+    }
+    
+@media(max-width:768px){
+    .brand-name{
+        font-size: 1.1em;
+    }
+    .x-right-grid{
+        width: 100%;
+    }
+    .second-nav ul.right-nav {
+        float: left;
+        padding: 0px 10px
+    }
+    .second-nav ul.right-nav li {
+       display: inline-block
+    }
+    .list.text{
+    padding: 5px 10px;
+}
+.page-start .left-grid,.page-start .right-grid{
+    width: 100%
+}
+.main-page{
+    padding: 0px
+}
+.page-start .left-grid{
+    height: auto;
+    overflow: visible
+}
+
+.dp{
+    padding: 0px 10px 0px 0px;
+    
+}
+.dp2{
+    padding: 0px 0px 0px 10px;
+}
+.groupbtn,.videobtn,.chatbtn{
+   font-size:2em;padding:10px 20px
+}
+}
