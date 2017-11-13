@@ -41,4 +41,4 @@ app.use('/videocall',vids)
 app.use('/chat', chat)
 app.use('/login',login);
 
-app.listen(3000,()=>console.log('server listening at port 3000'))
+app.listen(process.env.PORT || 3001,()=>console.log('server listening at port 3000'))
