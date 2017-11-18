@@ -24,6 +24,7 @@ app.use(bodyParser({
     json : true
 }))
 
+process.env.PORT ?
 app.use(session({
     secret: "alsdfjaklasdf",
     saveUninitialized:true,
@@ -32,7 +33,13 @@ app.use(session({
         mongooseConnection: mongoose.connection,
         stringify: true
     }) 
-}))
+})) : 
+    app.use(session({
+        secret: "alsdfjaklasdf",
+        saveUninitialized: false,
+        resave: false,
+    }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(function (req,res,next) { 
