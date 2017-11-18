@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+
+</head>
+
+<body style="background:#edf1f5;">
+
+
+    <div class="row">
+        <div class="col-sm-1 navbar-inverse hidden-xs zero x-left-grid">
+            <div class="x-sidebar">
+                <div class="home-tab">
+                    <center>
+                        <a href="/"><i class="fa fa-home"></i></a>
+                    </center>
+                </div>
+                <div class="sidebar-list">
+                    <a href="" class="">
+                        <center>
+                            <img src="./images/user.jpg" width="50%" class="img-responsive img-rounded" alt="Image">
+                        </center>
+                    </a>
+                </div>
+                <div class="sidebar-list">
+                    <a href="" class="">
+                        <center>
+                            <i class="fa fa-th"></i>
+                        </center>
+                    </a>
+                </div>
+                <div class="sidebar-list">
+                    <a href="/videocall" class="" id="videocall">
+                        <center>
+                            <i class="fa fa-video-camera"></i>
+                        </center>
+                    </a>
+                </div>
+                <div class="sidebar-list">
+                    <a href="/chat" class="" id="chat">
+                        <center>
+                            <i class="fa fa-comments"></i>
+                        </center>
+                    </a>
+                </div>
+                <div class="sidebar-list">
+                    <a href="" class="">
+                        <center>
+                            <i class="fa fa-envelope"></i>
+                        </center>
+                    </a>
+                </div>
+                <div class="sidebar-list">
+                    <a href="" class="">
+                        <center>
+                            <i class="fa fa-group"></i>
+                        </center>
+                    </a>
+                </div>
+                <div class="sidebar-list">
+                    <a href="" class="">
+                        <center>
+                            <i class="fa fa-cog"></i>
+                        </center>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-11 x-right-grid">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                                                <span class="sr-only">Toggle navigation</span>
+                                                                <span class="icon-bar"></span>
+                                                                <span class="icon-bar"></span>
+                                                                <span class="icon-bar"></span>
+                                                            </button>
+                    <a class="navbar-brand" href="/" style="padding: 13px 5px">
+                        <div class="brand-name"><b>
+                        <i class="fa fa-instagram"></i>
+                        <span >Campus</span></b>Connect</div>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse" >
+                    <ul class="nav navbar-nav navbar-right"  style="padding-right:20px">
+                        <li>
+                            <a href="#" class="" style="color:#fff">
+                                                                            <img src="./images/user.jpg" width="35px" class="img-responsive" alt="Image" style="float:left; border-radius:100%; margin:-6px 10px 0px 0px">
+                                                                                {{ user.username }}
+                                                                            </a>
+                        </li>
+                        <li class="hidden-lg hidden-sm hidden-md">
+                            <a href="/videocall" style="color:#fff">
+                                                                                Video Call
+                        </a></li>
+                        <li class="hidden-lg hidden-sm hidden-md">
+                            <a href="/chat" style="color:#fff">
+                                                                                Chat
+                    </a></li>
+                        <li class="hidden-lg hidden-sm hidden-md">
+                            <a href="/logout" style="color:#fff">
+                                                                                Logout
+                    </a></li>
+                    </ul>
+                </div>
+            </nav>

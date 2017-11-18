@@ -1,25 +1,27 @@
 module.exports = function (app,passport,fbStrategy,config,mongoose) {  
     var userSchema = mongoose.Schema({
-        username: String,
-        password: String
+        username: {required:true,type:String},
+        password: { required: true, type: String }
     });
+
     var userModel = mongoose.model("user",userSchema);
-    passport.serializeUser(function (user,cb) {
-        cb(null,user.id)
-    })
-    passport.deserializeUser(function (id, cb) {
-        userModel.findById(id,function (err,user) { 
-            cb(err,user)
-         })
-    })
-    passport.use(new fbStrategy({
+    passport.serializeUser(function (user,done) {
+        done(null,user.id)
+    });
+    passport.deserializeUser(function (id, done) {
+        userModel.findById(id).then(function (id) { done(null,id) },function (err) { done(err) });
+    });
+    passport.use('fb.strategy',new fbStrategy({
         clientID: config.fb.appID,
         clientSecret: config.fb.appSecret,
         callbackURL: config.fb.callback,
         profileFields: ['id', 'displayName', 'photos', 'email']
-    },function (accessToken,refreshToken,profile,cb) { 
-        userModel.find({facebookId: profile.id},function(err,result){
-            return cb(err,result);
+    },function (accessToken,refreshToken,profile,done) { 
+        userModel.findOne({facebookId: profile.id}).then(function(user){
+            done(null,user);
+        },function (err) {
+            done(err);
         });
-     }))
+    }))
+    
 }

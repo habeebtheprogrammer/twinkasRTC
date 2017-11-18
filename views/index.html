@@ -17,7 +17,7 @@
     
  
  <div class="row" >
-     <div class="col-sm-1 navbar-inverse hidden-xs zero x-left-grid" >
+     <!-- <div class="col-sm-1 navbar-inverse hidden-xs zero x-left-grid" >
         <div class="x-sidebar">
             <div class="home-tab">
                 <center>
@@ -74,53 +74,47 @@
                 </a>
             </div>
         </div>
-     </div>
-     
-     <div class="col-sm-11 x-right-grid">
-            <nav class="navbar navbar-inverse" role="navigation" >
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-                    <a class="navbar-brand" href="" >
-                        <div  class="brand-logo"><img src="./images/admin-logo.png" alt="" ></div>
-                        <div class="brand-name" style=" "><b ><span >Twinkas</span></b>.io</div>
-                    </a>
-                </div>
+     </div> -->
+     <div class="col-sm-12 zero">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                                                <span class="sr-only">Toggle navigation</span>
+                                                                <span class="icon-bar"></span>
+                                                                <span class="icon-bar"></span>
+                                                                <span class="icon-bar"></span>
+                                                            </button>
+                <a class="navbar-brand" href="/">
+                    <div class="brand-logo"><img src="./images/admin-logo.png" alt=""></div>
+                    <div class="brand-name" style=" "><b><span >Twinkas</span></b>.io</div>
+                </a>
+            </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                  
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"class="navbar-link" >
-                            
-                            <form action="" class="form-inline" method="POST" role="form">
-
-                                    <div class="form-group has-feedback">
-                                        <input type="text" class="form-control" id=""  placeholder="Search..." style="">
-                                    </div>
-                            </form>
-                            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right"  style="padding-right:20px">
+                    <li>
+                        <a href="#" class="" style="color:#fff">
+                                                                            <img src="./images/user.jpg" width="35px" class="img-responsive" alt="Image" style="float:left; border-radius:100%; margin:-6px 10px 0px 0px">
+                                                                                {{ user.username }}
+                                                                            </a>
+                    </li>
+                    <li class="hidden-lg hidden-sm hidden-md">
+                        <a href="/videocall" style="color:#fff">
+                                                                                Video Call
                         </a></li>
-                        <li class="dropdown">
-                            
-                            <img src="./images/user.jpg" width="25%" class="img-responsive" alt="Image" style="float:left; border-radius:100%;margin:12px 5px 0px">
-                            
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff">Steave <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                    <li class="hidden-lg hidden-sm hidden-md">
+                        <a href="/chat" style="color:#fff">
+                                                                                Chat
+                    </a></li>
+                    <li class="hidden-lg hidden-sm hidden-md">
+                        <a href="/logout" style="color:#fff">
+                                                                                Logout
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
 
             <!-- second nav -->
             <!-- <div class="second-nav" style="">
@@ -154,7 +148,7 @@
                         
                         <div class="row " >
                          
-                         <div class="col-xs-12" style="min-height:520px;background:linear-gradient(black,transparent 90%),url('./images/cropper.jpg');color:#eee;">
+                         <div class="col-xs-12" style="min-height:600px;background:linear-gradient(black,transparent 90%),url('./images/cropper.jpg');background-size:cover;color:#eee;">
                            
                             <div style="padding:100px 10px 0px">
                                 <p><button class="btn btn-danger btn-xs" style="border-radius:20px">documentation</button></p>
@@ -224,7 +218,7 @@
             </div>
             
      </div>
-     <div class="col-xs-12" style="background:#fff; ">
+     <!-- <div class="col-xs-12" style="background:#fff; ">
          <div style="text-align:center;padding: 15px 0px;font-weight:400">
              2017 © Peer to Peer RTC Designed by Habeeb <br>
             <button class="btn btn-danger btn-sm btn-round" style="border-radius:100%;box-shadow:0 1px 10px 0 darkgrey;border:none">
@@ -237,7 +231,7 @@
                     <i class="fa fa-whatsapp"></i>
                     </button>
          </div>
-     </div>
+     </div> -->
  </div>
  
     

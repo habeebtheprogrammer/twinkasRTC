@@ -13,6 +13,7 @@ body{
 }
 nav.navbar{
     margin-bottom: 0px;
+    border-radius: 0px
 }
 .btn-custom{
     background: linear-gradient(to right,#2f323e,#692F2F);
@@ -108,7 +109,13 @@ a{
     margin: 14px 10px 0px
     
 }
-.list.button .btn{
+.list.button a{
+    padding:4px 10px;
+}
+.list.button a:hover{
+    background: #E73D31;
+}
+.list.button .btn,.list a{
    box-shadow:0 1px 20px 0 darkgrey;border:none
 }
 .btn-danger{
@@ -169,6 +176,9 @@ a{
    
 width: 100%;
 }
+.video-div{
+    height:350px;overflow:hidden
+}
 .videocall{
     color: #C52B2B;
 }
@@ -218,7 +228,7 @@ float:left; padding:0px
     border-width: 10px;
     position: absolute;
     border-style: solid;
-    right: 0;
+    right: -10px;
     top:10px;
 }
 .dp2::after{
@@ -227,7 +237,7 @@ float:left; padding:0px
     border-width: 10px;
     position: absolute;
     border-style: solid;
-    left: 0;
+    left: -10px;
     top:10px;
 }
 .chat-input input{
@@ -317,4 +327,8 @@ button:hover{
 .groupbtn,.videobtn,.chatbtn{
    font-size:2em;padding:10px 20px
 }
+.video-div{
+    height:inherit;
+}
+
 }

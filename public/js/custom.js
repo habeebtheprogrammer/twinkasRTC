@@ -5,6 +5,7 @@ var pc1,pc2;
 $("#callbtn").on("click",start);
 var prevRemoteSrc = $(remoteSrc).attr('src')
 $(localSrc).hide();
+$(remoteSrc).hide();
 $('.notification-close').on("click",function(){$(this).parent().parent().parent().addClass("slideOutLeft")})
 $("#hangup").hide();
 function success(stream)
@@ -40,6 +41,7 @@ function success(stream)
     remoteSrc.src = window.URL.createObjectURL(stream);
     $(callBtn).hide();
     $('#hangup').show();
+    $(remoteSrc).show();
     $('.notification').show();
     $('#hangup').on("click", hangup);
     callBtn.disabled = false;
@@ -66,12 +68,21 @@ function failed(err) {  console.log(err)}
     navigator.getUserMedia(constraint, success,failed)
 }
 function hangup(){console.log(pc1);
-    $('.notification').addClass("slideOutLeft")
+    $('.notification').addClass("slideOutRIght")
     pc1.close(); pc2.close();
     pc1 = pc2 = null;   
     $("#hangup").hide();
+    $(remoteSrc).hide();
     $(callBtn).show().html("Call");
     $('.replace-img').show();
     $('#localvideo').hide();
     remoteSrc.src = prevRemoteSrc;
 }
+
+
+if(window.location.pathname === "/chat"){
+    $('#chat').addClass('active')
+};
+if (window.location.pathname === "/videocall") {
+    $('#videocall').addClass('active')
+};

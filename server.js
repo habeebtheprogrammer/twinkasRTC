@@ -3,16 +3,28 @@ var express = require('express');
 var hbs = require('hbs');
 var path =require('path')
 var app = express();
-var index = require('./routes/index')
-var vids = require('./routes/video');
-var chat = require('./routes/chat')
-var login = require('./routes/login')
+var routes = require('./routes/index')
 var config = require("./config/config");
 var session = require('express-session');
-var mongoose = require("mongoose").connect(config.dbURL);
+var http = require('http')
 var connectMongo = require('connect-mongo')(session);
 var passport = require("passport");
 var fbStrategy = require("passport-facebook");
+var mongoose = require('./mongoose');
+var bodyParser = require('body-parser');
+hbs.registerPartials(path.join(__dirname,'views/partials'))
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', "html");
+
+app.engine('html', require('hbs').__express);
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser({
+    extended:true,
+    urlencoded: true,
+    json : true
+}))
+
+process.env.PORT ?
 app.use(session({
     secret: "alsdfjaklasdf",
     saveUninitialized:true,
@@ -20,25 +32,22 @@ app.use(session({
     store: new connectMongo({
         mongooseConnection: mongoose.connection,
         stringify: true
-    })
-}));
+    }) 
+})) : 
+    app.use(session({
+        secret: "alsdfjaklasdf",
+        saveUninitialized: false,
+        resave: false,
+    }));
+
 app.use(passport.initialize());
-app.use(passport.session())
-require('./auth/auth')(app,passport,fbStrategy,config,mongoose);
-app.get('/auth/facebook', passport.authenticate('facebook'));
-app.get('/auth/facebook/callback', passport.authenticate("facebook", {
-    failureRedirect: "/login"
-}), function (req, res) {
-    res.redirect('/chat')
-})
+app.use(passport.session());
+app.use(function (req,res,next) { 
+    res.locals.user = req.user || null;
+    next();
+ });
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('views',path.join(__dirname,'views'));
-app.set('view engine',"html")
-app.engine('html', require('hbs').__express);
-app.use('/',index);
-app.use('/videocall',vids)
-app.use('/chat', chat)
-app.use('/login',login);
-
-app.listen(process.env.PORT || 3001,()=>console.log('server listening at port 3000'))
+process.env.PORT ? require('./auth/auth')(app,passport,fbStrategy,config,mongoose):null
+// require('./auth/localStrategy');
+app.use('/',routes);
+app.listen(process.env.PORT || 3001,()=>console.log('server listening at port 3001'))

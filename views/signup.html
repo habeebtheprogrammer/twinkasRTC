@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body style="background:#eee;color:#eee">
+<div style="background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(165, 14, 4, 0.6) 80%),url('./images/ui.png');min-height:662px;background-size:cover">
+
+        <nav class="navbar container navbar-inverse" role="navigation" style="background:transparent;border:none; padding:10px">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <div class="brand-logo"><img src="./images/admin-logo.png" alt=""></div>
+                    <div class="brand-name" style=" "><b><span >Pingus</span></b>.io</div>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse" style="border:none;">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/login" class="navbar-link" style="color:#fff">
+                   
+                   <i class="fa fa-user"></i>
+                    Login
+                </a>
+                    </li>
+                    <li>
+                        <a href="/signup" class="navbar-link" style="color:#fff">
+                   
+                   <i class="fa fa-users"></i>
+                    Signup
+                </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <div class="row" class="form-horizontal" style="padding:50px 0px;margin:0">
+        <div class=" col-sm-4 col-sm-offset-4 bounceInLeft animated"  style="overflow: hidden">
+
+            <form action="/auth/signup" method="POST" role="form">
+                <div class="row" style="padding:30px 0px">
+                    <div class="col-xs-4" style="padding-top:18px" > <div style="height:1px; background:#777;width:100% "></div></div>
+                    <div class="col-xs-4 zero" style="font-size:1.8em"><center>Sign Up </center></div>
+                    <div class="col-xs-4" style="padding-top:18px">
+                        <div style="height:1px; background:#777;width:100% "></div>
+                    </div>
+                </div>
+            <div class="form-group has-feedback">
+
+                <input type="text" name="username" class="form-control" value="" required="required" placeholder="Username">
+                <span class="form-control-feedback">
+                <i class="fa fa-user"></i>
+                </span>
+            </div>
+            <div class="form-group has-feedback">
+                
+                <input type="text" name="email" class="form-control" type="email" required="required" placeholder="Email">
+                <span class="form-control-feedback">
+                <i class="fa fa-envelope"></i>
+                </span>
+            </div>
+            <div class="form-group has-feedback">
+
+                <input name="password" type="password" class="form-control" value="" required="required" placeholder="Password">
+                <span class="form-control-feedback">
+                <i class="fa fa-lock"></i>
+                </span>
+            </div>
+            <div class="form-group has-feedback">
+
+               <button type="submit"  class="btn btn-block btn-sm btn-custom"> Sign up</button>
+            </div>
+            </form>
+            <hr><center>Already a member? <a href="/login">Log in</a> 
+         
+        </div>
+
+    </div>
+<div class="container">
+    <span>
+            Follow us on
+            <button type="button" class="btn btn-default" style="background:transparent; border-radius:100%;color:#fff"><i class="fa fa-facebook"></i></button>
+            <button type="button" class="btn btn-default" style="background:transparent; border-radius:100%;color:#fff"><i class="fa fa-twitter"></i></button>
+            <button type="button" class="btn btn-default" style="background:transparent; border-radius:100%;color:#fff  "><i class="fa fa-instagram"></i></button>
+            
+            
+            
+        </span>
+    <span class="pull-right"> Designed by <span style="color:#D3450C">Habeeb Abdulrahman</span>
+    </span>
+</div>
+    </div>
+    <style>
+        a{
+            color:#D3450C
+        }
+        input.form-control::-webkit-input-placeholder{color:#eee}
+        input.form-control {
+            background: rgba(228, 223, 223, 0.2);
+            border: none  ;
+            color: #eee;
+            -webkit-transition: 0.2s ease-in;
+            -moz-transition: 0.2s ease-in;
+            transition: 0.2s ease-in;
+
+        }
+
+        input:focus {
+
+            letter-spacing: 2px;
+            -webkit-transition: 0.2s ease-in;
+            -moz-transition: 0.2s ease-in;
+            transition: 0.2s ease-in;
+        }
+      
+    </style>
+
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>

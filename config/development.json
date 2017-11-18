@@ -1,5 +1,5 @@
 {
-    "dbURL": "mongodb://guest:guest@ds159845.mlab.com:59845/twinkasrtc",
+    "dbURL": "mongodb://localhost:27017/twinkasrtc",
     "fb": {
         "appID": "141625929928215",
         "appSecret": "1a7b27ddefe05428d25b5afbbb368d51",
