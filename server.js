@@ -40,7 +40,7 @@ app.use(function (req,res,next) {
     next();
  });
 
-process.env.PORT ? require('./auth/auth')(app,passport,fbStrategy,config,mongoose):null
+// process.env.PORT ? require('./auth/auth')(app,passport,fbStrategy,config,mongoose):null
 // require('./auth/localStrategy');
 app.use('/',routes);
 app.listen(process.env.PORT || 3001,()=>console.log('server listening at port 3001'))
