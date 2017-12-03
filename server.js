@@ -9,7 +9,7 @@ var session = require('express-session');
 var http = require('http')
 var connectMongo = require('connect-mongo')(session);
 var passport = require("passport");
-// var fbStrategy = require("passport-facebook");
+var fbStrategy = require("passport-facebook");
 var mongoose = require('./mongoose');
 var bodyParser = require('body-parser');
 hbs.registerPartials(path.join(__dirname,'views/partials'))
