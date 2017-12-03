@@ -7,10 +7,10 @@ var routes = require('./routes/index')
 var config = require("./config/config");
 var session = require('express-session');
 var http = require('http')
+var mongoose = require('./mongoose');
 var connectMongo = require('connect-mongo')(session);
 var passport = require("passport");
 var fbStrategy = require("passport-facebook");
-var mongoose = require('./mongoose');
 var bodyParser = require('body-parser');
 hbs.registerPartials(path.join(__dirname,'views/partials'))
 app.set('views', path.join(__dirname, 'views'));
@@ -23,9 +23,7 @@ app.use(bodyParser({
     urlencoded: true,
     json : true
 }))
-
 process.env.PORT ?
-
 app.use(session({
     secret: "alsdfjaklasdf",
     saveUninitialized:true,
@@ -34,7 +32,8 @@ app.use(session({
         mongooseConnection: mongoose.connection,
         stringify: true
     }) 
-})) : 
+}))
+ : 
     app.use(session({
         secret: "alsdfjaklasdf",
         saveUninitialized: false,
